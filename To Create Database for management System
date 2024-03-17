@@ -1,0 +1,30 @@
+sql
+-- Create the books table
+CREATE TABLE books (
+  book_id INT PRIMARY KEY,
+  title VARCHAR(255),
+  author_id INT,
+  availability_status VARCHAR(20)
+);
+
+-- Create the authors table
+CREATE TABLE authors (
+  author_id INT PRIMARY KEY,
+  author_name VARCHAR(255),
+  nationality VARCHAR(50)
+);
+
+-- Create the borrowers table
+CREATE TABLE borrowers (
+  borrower_id INT PRIMARY KEY,
+  borrower_name VARCHAR(255),
+  contact_info VARCHAR(255)
+);
+
+-- Create the transactions table
+CREATE TABLE transactions (
+  transaction_id INT PRIMARY KEY,
+  book_id INT,
+  borrower_id INT,
+  transaction_date DATE
+);
